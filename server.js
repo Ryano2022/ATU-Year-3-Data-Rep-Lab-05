@@ -3,6 +3,12 @@ const app = express()
 const port = 4000; // Port to listen to.
 
 app.get(
+  '/name', (req, res) => {
+    res.send('Hello ' + req.query.fname + " " + req.query.lname);
+  }
+)
+
+app.get(
   '/test', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   }
