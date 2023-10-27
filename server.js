@@ -21,12 +21,14 @@ app.get(
   }
 )
 
+// Test
 app.get(
   '/test', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   }
 )
 
+// API to use.
 app.get(
   '/api/books', (req, res) => {
     const data = [ 
