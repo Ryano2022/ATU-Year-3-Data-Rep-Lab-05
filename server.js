@@ -2,6 +2,19 @@ const express = require('express')
 const app = express()
 const port = 4000; // Port to listen to.
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+
+// Receive data through the body of the HTTP request.
+app.post(
+  '/name', (req, res) => {
+    res.send('Hello ' + req.body.fname + " " + req.body.lname);
+  }
+)
+
+// Receive data through the URL.
 app.get(
   '/name', (req, res) => {
     res.send('Hello ' + req.query.fname + " " + req.query.lname);

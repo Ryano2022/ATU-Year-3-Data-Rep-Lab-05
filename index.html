@@ -6,8 +6,18 @@
   <body>
     <h1>Hello from index.html!</h1>
 
-    <h3>GET Method</h3>
+    <h3>GET Method</h3> <!-- Sends data as part of the URL. -->
     <form action = "/name" method = "GET">
+      <label>First Name: </label>
+      <input type = "text" name = "fname" value = "Ryan"><br>
+      <label>Surname: </label>
+      <input type = "text" name = "lname" value = "Hogan"><br>
+
+      <input type = "submit" value = "submit"><br>
+    </form>
+
+    <h3>POST Method</h3> <!-- Sends data as part of the body of the HTTP request. -->
+    <form action = "/name" method = "POST">
       <label>First Name: </label>
       <input type = "text" name = "fname" value = "Ryan"><br>
       <label>Surname: </label>
